@@ -72,18 +72,17 @@ export function Solutions() {
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-20 items-start">
           {/* Left text */}
           <motion.div
-            className="lg:max-w-md flex-shrink-0"
+            className="lg:max-w-md flex-shrink-0 mb-6 lg:mb-0"
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           >
-            <p className="text-arvana-blue text-sm font-semibold tracking-wide uppercase mb-4">
+            <p className="text-arvana-blue text-sm font-medium tracking-wide uppercase mb-3">
               ✦ Our Solutions
             </p>
-            <h2 className="text-[clamp(1.7rem,3.5vw,2.6rem)] font-bold leading-[1.15] tracking-tight text-white mb-5">
-              Smart Automation.<br />
-              Real Business{' '}
+            <h2 className="text-[clamp(1.6rem,3.5vw,2.4rem)] font-bold leading-[1.2] tracking-tight text-white mb-6">
+              Smart Automation. Real Business{' '}
               <span className="bg-gradient-to-r from-arvana-blue to-arvana-rose bg-clip-text text-transparent italic">
                 Impact.
               </span>

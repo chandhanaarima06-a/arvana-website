@@ -8,7 +8,7 @@ const INDUSTRIES = [
 
 export function CredibilityStrip() {
   return (
-    <div className="section-divider mb-10 lg:mb-16" >
+    <div className="section-divider mb-14 lg:mb-20" >
       <motion.div
         className="max-w-7xl mx-auto px-6 lg:px-10 py-6 flex flex-wrap items-center justify-center gap-4 lg:gap-6 text-sm"
         initial={{ opacity: 0 }}

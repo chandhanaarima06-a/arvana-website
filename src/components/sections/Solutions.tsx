@@ -96,8 +96,8 @@ export function Solutions() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </a>
-            <p className="text-arvana-grey/50 text-[13px] mt-4 tracking-wide uppercase">
-              Real Estate · D2C Commerce · More
+            <p className="text-arvana-grey/50 text-[12px] mt-4 lg:mt-6 tracking-wide uppercase">
+              🏠 Real Estate · 🛒 D2C Commerce · ⚡ More
             </p>
           </motion.div>
 

@@ -34,7 +34,7 @@ export default function App() {
         className="fixed bottom-8 right-8 z-50"
       >
         <a
-          href="https://wa.me/917708431829"
+          href="https://wa.me/917708431829?text=Hi%20ARVANA%2C%20I%20am%20interested%20in%20your%20AI%20automation%20services.%20Can%20you%20share%20more%20information%3F"
           target="_blank"
           rel="noopener noreferrer"
           className="w-14 h-14 rounded-full bg-gradient-to-r from-green-500 to-emerald-600 flex items-center justify-center shadow-2xl shadow-green-500/25 hover:shadow-green-500/40 hover:scale-110 transition-all duration-300 border-2 border-white/10"

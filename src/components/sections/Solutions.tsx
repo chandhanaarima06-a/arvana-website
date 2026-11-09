@@ -78,16 +78,13 @@ export function Solutions() {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           >
-            <p className="text-arvana-blue text-sm font-medium tracking-wide uppercase mb-3">
-              ✦ Our Solutions
-            </p>
             <h2 className="text-[clamp(1.6rem,3.5vw,2.4rem)] font-bold leading-[1.2] tracking-tight text-white mb-6">
               Smart Automation. Real Business{' '}
               <span className="bg-gradient-to-r from-arvana-blue to-arvana-rose bg-clip-text text-transparent italic">
                 Impact.
               </span>
             </h2>
-            <p className="text-arvana-grey text-[16px] leading-relaxed mb-8">
+            <p className="text-arvana-grey text-[15px] leading-relaxed mb-8">
               From WhatsApp to Instagram, we help you turn conversations into customers with powerful AI automation.
             </p>
             <a
@@ -99,6 +96,9 @@ export function Solutions() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </a>
+            <p className="text-arvana-grey/50 text-[13px] mt-4 tracking-wide uppercase">
+              Real Estate · D2C Commerce · More
+            </p>
           </motion.div>
 
           {/* Right: Cards */}

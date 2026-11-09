@@ -262,7 +262,7 @@ export function Navbar() {
               )}
 
               <button
-                onClick={() => { setContactOpen(false); window.open('https://wa.me/917708431829', '_blank'); }}
+                onClick={() => { setContactOpen(false); window.open('https://wa.me/917708431829?text=Hi%20ARVANA%2C%20I%20am%20interested%20in%20your%20AI%20automation%20services.%20Can%20you%20share%20more%20information%3F', '_blank'); }}
                 className="w-full flex items-center justify-between px-6 py-4 rounded-2xl bg-arvana-black/40 border border-white/10 text-left hover:border-arvana-blue/40 hover:bg-white/5 transition-all duration-300 group"
               >
                 <div className="flex items-center gap-4">

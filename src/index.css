@@ -1,16 +1,17 @@
 @import "tailwindcss";
 
 @theme {
-  --color-arvana-black: #050510;
-  --color-arvana-charcoal: #0C0C1D;
-  --color-arvana-card: #0F1025;
-  --color-arvana-blue: #00B4FF;
-  --color-arvana-cyan: #00D4FF;
-  --color-arvana-rose: #E040A0;
-  --color-arvana-purple: #7C3AED;
+  --color-arvana-black: #0B0B0C;
+  --color-arvana-charcoal: #141416;
+  --color-arvana-card: #141416;
+  --color-arvana-surface: #1A1A1E;
   --color-arvana-white: #FFFFFF;
-  --color-arvana-grey: #8A94A6;
+  --color-arvana-offwhite: #E4E4E7;
+  --color-arvana-lime: #C6F432;
+  --color-arvana-grey: #6B6B70;
+  --color-arvana-muted: #8A8A90;
   --color-arvana-light: #C5CDD8;
+  --color-arvana-ink: #0B0B0C;
 
   --font-family-sans: 'Inter', system-ui, -apple-system, sans-serif;
 }
@@ -57,6 +58,12 @@ textarea {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--color-arvana-white);
+  outline-offset: 2px;
 }
 
 @media (prefers-reduced-motion: reduce) {

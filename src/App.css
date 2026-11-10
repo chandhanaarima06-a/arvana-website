@@ -1,245 +1,65 @@
-/* ─── Hero background glow ─── */
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
-  z-index: 0;
+/* ─── Section variants ─── */
+.section-dark {
+  background: var(--color-arvana-black);
+  color: var(--color-arvana-white);
 }
 
-.hero-bg::before {
-  content: '';
-  position: absolute;
-  top: -30%;
-  right: -15%;
-  width: 900px;
-  height: 900px;
-  border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(0, 180, 255, 0.25) 0%,
-    rgba(124, 58, 237, 0.18) 35%,
-    rgba(224, 64, 160, 0.12) 60%,
-    transparent 80%
-  );
-  filter: blur(80px);
-  animation: glow-drift 8s ease-in-out infinite alternate;
+.section-light {
+  background: var(--color-arvana-charcoal);
+  color: var(--color-arvana-offwhite);
 }
 
-.hero-bg::after {
-  content: '';
-  position: absolute;
-  bottom: -20%;
-  left: -10%;
-  width: 600px;
-  height: 600px;
-  border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(224, 64, 160, 0.18) 0%,
-    rgba(124, 58, 237, 0.1) 50%,
-    transparent 80%
-  );
-  filter: blur(70px);
-  animation: glow-drift 8s ease-in-out infinite alternate-reverse;
+.section-light .text-white,
+.section-light h1,
+.section-light h2,
+.section-light h3,
+.section-light h4,
+.section-light .text-arvana-white {
+  color: var(--color-arvana-white);
 }
 
-@keyframes glow-drift {
-  0% { transform: translate(0, 0) scale(1); }
-  100% { transform: translate(30px, -20px) scale(1.08); }
+.section-light .text-arvana-grey,
+.section-light .text-arvana-muted {
+  color: var(--color-arvana-grey);
 }
 
-/* ─── 3D Orbital Sculpture ─── */
-.orbital-scene {
-  width: 520px;
-  height: 520px;
-  position: relative;
-  perspective: 1200px;
+.section-light .card {
+  background: var(--color-arvana-surface);
+  border-color: rgba(255, 255, 255, 0.06);
+  color: var(--color-arvana-offwhite);
 }
 
-.orbital-core {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  animation: orbital-spin 24s linear infinite;
-  transform-style: preserve-3d;
-}
-
-.orbital-ring {
-  position: absolute;
-  border-radius: 50%;
-  border: 2px solid;
-  box-shadow: 0 0 30px 2px rgba(0, 180, 255, 0.15);
-  animation: ring-wobble 12s ease-in-out infinite;
-}
-
-.orbital-ring--1 {
-  width: 400px;
-  height: 400px;
-  border-color: rgba(0, 180, 255, 0.5);
-  transform: rotateX(70deg) rotateY(15deg);
-  animation-duration: 14s;
-  box-shadow: 0 0 40px rgba(0, 180, 255, 0.3), inset 0 0 40px rgba(0, 180, 255, 0.1);
-}
-
-.orbital-ring--2 {
-  width: 360px;
-  height: 360px;
-  border-color: rgba(124, 58, 237, 0.5);
-  transform: rotateX(60deg) rotateY(-30deg) rotateZ(50deg);
-  animation-duration: 18s;
-  animation-direction: reverse;
-  box-shadow: 0 0 40px rgba(124, 58, 237, 0.3), inset 0 0 40px rgba(124, 58, 237, 0.1);
-}
-
-.orbital-ring--3 {
-  width: 340px;
-  height: 340px;
-  border-color: rgba(224, 64, 160, 0.4);
-  transform: rotateX(55deg) rotateY(60deg) rotateZ(-20deg);
-  animation-duration: 22s;
-  box-shadow: 0 0 40px rgba(224, 64, 160, 0.25), inset 0 0 40px rgba(224, 64, 160, 0.08);
-}
-
-.orbital-ring--4 {
-  width: 440px;
-  height: 440px;
-  border-color: rgba(0, 212, 255, 0.25);
-  border-style: dashed;
-  transform: rotateX(80deg) rotateY(-10deg) rotateZ(30deg);
-  animation-duration: 30s;
-  animation-direction: reverse;
-  box-shadow: none;
-}
-
-/* Glowing center sphere */
-.orbital-sphere {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background: radial-gradient(
-    circle at 35% 35%,
-    rgba(0, 212, 255, 0.9) 0%,
-    rgba(124, 58, 237, 0.7) 40%,
-    rgba(224, 64, 160, 0.5) 70%,
-    rgba(5, 5, 16, 0.8) 100%
-  );
-  box-shadow:
-    0 0 60px rgba(0, 180, 255, 0.6),
-    0 0 120px rgba(124, 58, 237, 0.3),
-    inset 0 -20px 40px rgba(0, 0, 0, 0.5),
-    inset 0 10px 30px rgba(255, 255, 255, 0.2);
-  animation: sphere-pulse 4s ease-in-out infinite;
-  position: relative;
-  z-index: 5;
-}
-
-/* Sphere reflection highlight */
-.orbital-sphere::before {
-  content: '';
-  position: absolute;
-  top: 12%;
-  left: 22%;
-  width: 30%;
-  height: 20%;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.35);
-  filter: blur(6px);
-}
-
-/* Floating dot particles on rings */
-.orbital-dot {
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #00D4FF;
-  box-shadow: 0 0 12px 3px rgba(0, 212, 255, 0.7);
-}
-
-.orbital-dot--2 {
-  background: #7C3AED;
-  box-shadow: 0 0 12px 3px rgba(124, 58, 237, 0.7);
-}
-
-.orbital-dot--3 {
-  background: #E040A0;
-  box-shadow: 0 0 12px 3px rgba(224, 64, 160, 0.7);
-  width: 6px;
-  height: 6px;
-}
-
-@keyframes orbital-spin {
-  0%   { transform: rotateY(0deg); }
-  100% { transform: rotateY(360deg); }
-}
-
-@keyframes ring-wobble {
-  0%, 100% { opacity: 0.8; }
-  50%      { opacity: 1; }
-}
-
-@keyframes sphere-pulse {
-  0%, 100% { transform: scale(1); box-shadow: 0 0 60px rgba(0, 180, 255, 0.6), 0 0 120px rgba(124, 58, 237, 0.3); }
-  50%      { transform: scale(1.06); box-shadow: 0 0 80px rgba(0, 180, 255, 0.8), 0 0 160px rgba(124, 58, 237, 0.4); }
-}
-
-/* ─── Glassmorphism cards ─── */
-.glass-card {
-  background: linear-gradient(135deg, rgba(15, 16, 37, 0.8), rgba(12, 12, 29, 0.6));
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 16px;
-  backdrop-filter: blur(12px);
-  transition: all 0.35s ease;
-}
-
-.glass-card:hover {
-  border-color: rgba(0, 180, 255, 0.25);
-  box-shadow: 0 0 30px rgba(0, 180, 255, 0.08), 0 8px 32px rgba(0, 0, 0, 0.4);
-  transform: translateY(-4px);
-}
-
-/* ─── Section divider gradient line ─── */
+/* ─── Section divider: quiet hairline ─── */
 .section-divider {
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(0, 180, 255, 0.2), rgba(124, 58, 237, 0.2), transparent);
+  background: var(--color-arvana-white);
+  opacity: 0.08;
+  border: none;
+  margin: 0;
 }
 
-/* ─── Scrollbar ─── */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: #050510; }
-::-webkit-scrollbar-thumb { background: linear-gradient(to bottom, #00B4FF, #7C3AED); border-radius: 3px; }
-
-/* ─── Responsive orbital ─── */
-@media (max-width: 1024px) {
-  .orbital-scene {
-    width: 360px;
-    height: 360px;
-  }
-  .orbital-ring--1 { width: 280px; height: 280px; }
-  .orbital-ring--2 { width: 250px; height: 250px; }
-  .orbital-ring--3 { width: 230px; height: 230px; }
-  .orbital-ring--4 { width: 310px; height: 310px; }
-  .orbital-sphere   { width: 70px; height: 70px; }
+.section-light .section-divider {
+  background: #101419;
+  opacity: 0.06;
 }
 
-@media (max-width: 640px) {
-  .orbital-scene {
-    width: 280px;
-    height: 280px;
-  }
-  .orbital-ring--1 { width: 220px; height: 220px; }
-  .orbital-ring--2 { width: 190px; height: 190px; }
-  .orbital-ring--3 { width: 170px; height: 170px; }
-  .orbital-ring--4 { width: 240px; height: 240px; }
-  .orbital-sphere   { width: 54px; height: 54px; }
+/* ─── Raised surface: plain card, no glass, no glow ─── */
+.card {
+  background: var(--color-arvana-card);
+  border: 1px solid var(--color-arvana-white);
+  border-color: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  color: var(--color-arvana-white);
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .orbital-core,
-  .orbital-ring,
-  .orbital-sphere {
-    animation: none !important;
-  }
+/* ─── Scrollbar: quiet ─── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-arvana-black);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-arvana-muted);
+  border-radius: 3px;
 }

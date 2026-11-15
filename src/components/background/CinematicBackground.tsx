@@ -6,9 +6,9 @@ import { useMotionValue, useTransform, useSpring } from 'framer-motion';
  *
  * A lightweight, pure-CSS 3D environment that sits behind all page content.
  *
- * Visual direction: deep obsidian black + midnight blue architectural space,
- * rich cerulean blue (#168BFF) illuminating selected surfaces, layered depth,
- * subtle ambient lighting that responds gently to cursor movement on desktop.
+ * Visual direction: jet black (#080808) architectural space with metallic
+ * gold (#D4AF37) illuminating selected surfaces, layered depth, subtle
+ * ambient lighting that responds gently to cursor movement on desktop.
  *
  * No WebGL dependency: keeps performance high and works everywhere. A
  * prefers-reduced-motion media query freezes all motion.
@@ -46,9 +46,9 @@ export function CinematicBackground() {
           className="absolute top-0 left-0 w-full h-full"
           style={{
             background:
-              'radial-gradient(60% 60% at 25% 25%, rgba(22,139,255,0.10) 0%, transparent 45%), ' +
-              'radial-gradient(50% 50% at 75% 35%, rgba(22,139,255,0.06) 0%, transparent 40%), ' +
-              'radial-gradient(70% 70% at 50% 60%, rgba(15,23,42,0.35) 0%, transparent 55%)',
+              'radial-gradient(60% 60% at 25% 25%, rgba(212,175,55,0.10) 0%, transparent 45%), ' +
+              'radial-gradient(50% 50% at 75% 35%, rgba(212,175,55,0.06) 0%, transparent 40%), ' +
+              'radial-gradient(70% 70% at 50% 60%, rgba(8,8,8,0.45) 0%, transparent 55%)',
           }}
         />
 
@@ -69,8 +69,8 @@ export function CinematicBackground() {
                 width: `${22 + (i % 3) * 6}%`,
                 height: `${40 + (i % 2) * 20}%`,
                 background:
-                  'linear-gradient(180deg, rgba(22,139,255,0.04) 0%, rgba(9,11,20,0.35) 60%, rgba(9,11,20,0.6) 100%)',
-                border: '1px solid rgba(22,139,255,0.06)',
+                  'linear-gradient(180deg, rgba(212,175,55,0.04) 0%, rgba(21,21,21,0.35) 60%, rgba(21,21,21,0.6) 100%)',
+                border: '1px solid rgba(212,175,55,0.06)',
                 opacity: 0.35 + (i % 3) * 0.08,
                 filter: 'blur(1px)',
                 transform: `skewY(${-2 + (i % 3)}deg)`,
@@ -97,9 +97,9 @@ export function CinematicBackground() {
                 width: '1px',
                 height: '120%',
                 background:
-                  'linear-gradient(to bottom, transparent 0%, rgba(22,139,255,0.18) 35%, rgba(22,139,255,0.18) 65%, transparent 100%)',
+                  'linear-gradient(to bottom, transparent 0%, rgba(212,175,55,0.18) 35%, rgba(212,175,55,0.18) 65%, transparent 100%)',
                 transform: `skewX(${-1.5 + (i % 2) * 3}deg)`,
-                boxShadow: `0 0 14px rgba(22,139,255,0.10)`,
+                boxShadow: `0 0 14px rgba(212,175,55,0.10)`,
               }}
             />
           ))}
@@ -114,9 +114,9 @@ export function CinematicBackground() {
                 width: '110%',
                 height: '1px',
                 background:
-                  'linear-gradient(to right, transparent 0%, rgba(22,139,255,0.12) 25%, rgba(22,139,255,0.12) 75%, transparent 100%)',
+                  'linear-gradient(to right, transparent 0%, rgba(212,175,55,0.12) 25%, rgba(212,175,55,0.12) 75%, transparent 100%)',
                 transform: `skewX(${1.5 - (i % 2) * 3}deg)`,
-                boxShadow: `0 0 10px rgba(22,139,255,0.08)`,
+                boxShadow: `0 0 10px rgba(212,175,55,0.08)`,
               }}
             />
           ))}
@@ -138,9 +138,9 @@ export function CinematicBackground() {
                 top: `${10 + i * 20}%`,
                 width: `${26 + (i % 2) * 8}%`,
                 height: `${44 + (i % 2) * 12}%`,
-                border: '1px solid rgba(22,139,255,0.14)',
-                background: 'rgba(9,11,20,0.45)',
-                boxShadow: `inset 0 0 20px rgba(22,139,255,0.06), 0 0 24px rgba(22,139,255,0.06)`,
+                border: '1px solid rgba(212,175,55,0.14)',
+                background: 'rgba(21,21,21,0.45)',
+                boxShadow: `inset 0 0 20px rgba(212,175,55,0.06), 0 0 24px rgba(212,175,55,0.06)`,
                 backdropFilter: 'blur(6px)',
                 opacity: 0.5 + (i % 2) * 0.15,
               }}
@@ -153,11 +153,11 @@ export function CinematicBackground() {
           className="absolute inset-0"
           style={{
             backgroundImage:
-              'radial-gradient(1px 1px at 20% 30%, rgba(22,139,255,0.35), transparent), ' +
-              'radial-gradient(1px 1px at 80% 70%, rgba(22,139,255,0.25), transparent), ' +
-              'radial-gradient(1.5px 1.5px at 40% 80%, rgba(22,139,255,0.30), transparent), ' +
-              'radial-gradient(1px 1px at 90% 20%, rgba(22,139,255,0.20), transparent), ' +
-              'radial-gradient(1px 1px at 60% 10%, rgba(22,139,255,0.25), transparent)',
+              'radial-gradient(1px 1px at 20% 30%, rgba(212,175,55,0.35), transparent), ' +
+              'radial-gradient(1px 1px at 80% 70%, rgba(212,175,55,0.25), transparent), ' +
+              'radial-gradient(1.5px 1.5px at 40% 80%, rgba(212,175,55,0.30), transparent), ' +
+              'radial-gradient(1px 1px at 90% 20%, rgba(212,175,55,0.20), transparent), ' +
+              'radial-gradient(1px 1px at 60% 10%, rgba(212,175,55,0.25), transparent)',
             backgroundRepeat: 'repeat',
             backgroundSize: '220px 160px, 310px 210px, 430px 300px, 190px 140px, 360px 250px',
             opacity: 0.35,
@@ -168,7 +168,7 @@ export function CinematicBackground() {
         <div
           className="absolute inset-0"
           style={{
-            background: 'radial-gradient(circle at 50% 30%, transparent 30%, rgba(9,11,20,0.85) 90%)',
+            background: 'radial-gradient(circle at 50% 30%, transparent 30%, rgba(8,8,8,0.85) 90%)',
             pointerEvents: 'none',
           }}
         />

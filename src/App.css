@@ -1,7 +1,7 @@
-/* ─── Section variants ─── */
+/* ─── Section variants — gold / premium ─── */
 .section-dark {
   background: var(--color-arvana-black);
-  color: var(--color-arvana-white);
+  color: var(--color-arvana-warm-white);
 }
 
 .section-light {
@@ -15,7 +15,7 @@
 .section-light h3,
 .section-light h4,
 .section-light .text-arvana-white {
-  color: var(--color-arvana-white);
+  color: var(--color-arvana-warm-white);
 }
 
 .section-light .text-arvana-grey,
@@ -25,31 +25,41 @@
 
 .section-light .card {
   background: var(--color-arvana-surface);
-  border-color: rgba(255, 255, 255, 0.06);
+  border-color: rgba(212, 175, 55, 0.08);
   color: var(--color-arvana-offwhite);
 }
 
 /* ─── Section divider: quiet hairline ─── */
 .section-divider {
   height: 1px;
-  background: var(--color-arvana-white);
+  background: var(--color-arvana-warm-white);
   opacity: 0.08;
   border: none;
   margin: 0;
 }
 
 .section-light .section-divider {
-  background: #101419;
+  background: rgba(212, 175, 55, 0.08);
   opacity: 0.06;
 }
 
 /* ─── Raised surface: plain card, no glass, no glow ─── */
 .card {
   background: var(--color-arvana-card);
-  border: 1px solid var(--color-arvana-white);
-  border-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(212, 175, 55, 0.08);
   border-radius: 12px;
-  color: var(--color-arvana-white);
+  color: var(--color-arvana-warm-white);
+}
+
+/* ─── Gold accent utilities ─── */
+.text-gold {
+  color: var(--color-arvana-gold);
+}
+.border-gold-soft {
+  border-color: rgba(212, 175, 55, 0.25);
+}
+.bg-gold-soft {
+  background: rgba(212, 175, 55, 0.06);
 }
 
 /* ─── Scrollbar: quiet ─── */
@@ -60,6 +70,6 @@
   background: var(--color-arvana-black);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--color-arvana-muted);
+  background: var(--color-arvana-gold-dim);
   border-radius: 3px;
 }

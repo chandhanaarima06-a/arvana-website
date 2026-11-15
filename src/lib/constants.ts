@@ -1,6 +1,22 @@
 /**
- * Animation timing and easing constants for consistent motion design
+ * ARVANA premium design tokens — jet black + metallic gold palette.
+ * Matches src/index.css @theme values exactly.
  */
+export const COLORS = {
+  black: '#080808',
+  gold: '#D4AF37',
+  goldDim: '#B5942B',
+  warmWhite: '#F5F3EE',
+  charcoal: '#292929',
+  surface: '#121212',
+  card: '#121212',
+  offwhite: '#E8E4DA',
+  grey: '#8A8A8A',
+  muted: '#5A5A5A',
+  electricBlue: '#0A66CC',
+  ink: '#080808',
+} as const;
+
 export const ANIMATION = {
   duration: {
     fast: 0.2,
@@ -9,9 +25,7 @@ export const ANIMATION = {
     xslow: 1.0,
   },
   easing: {
-    // Single easing curve used across the screen (unslop pass 9)
     standard: [0.22, 1, 0.36, 1] as const,
-    // Kept for any legacy references
     easeOut: [0.22, 1, 0.36, 1] as const,
   },
   stagger: {
@@ -21,9 +35,6 @@ export const ANIMATION = {
   },
 } as const;
 
-/**
- * Responsive breakpoints matching Tailwind defaults
- */
 export const BREAKPOINTS = {
   mobile: 640,
   tablet: 768,
@@ -31,31 +42,10 @@ export const BREAKPOINTS = {
   wide: 1440,
 } as const;
 
-/**
- * Z-index scale for layering
- */
 export const Z_INDEX = {
   base: 0,
   dropdown: 10,
   navbar: 100,
   modal: 1000,
   tooltip: 2000,
-} as const;
-
-/**
- * Color palette (matches CSS variables)
- */
-export const COLORS = {
-  black: '#0B0B0C',
-  charcoal: '#141416',
-  surface: '#1A1A1E',
-  cerulean: '#168BFF',
-  emerald: '#10B981',
-  amber: '#F59E0B',
-  lime: '#C6F432',
-  white: '#FFFFFF',
-  offwhite: '#E4E4E7',
-  grey: '#6B6B70',
-  muted: '#8A8A90',
-  light: '#C5CDD8',
 } as const;

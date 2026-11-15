@@ -5,14 +5,14 @@ const LAYERS = 28;
 export function HeroBrandMark() {
   return (
     <div className="relative w-[210px] h-[210px] lg:w-[320px] lg:h-[320px] flex items-center justify-center">
-      {/* Lime ambient glow behind the mark — the one colour moment */}
+      {/* Cerulean ambient glow behind the mark — the one colour moment */}
       <motion.div
-        className="absolute inset-0 rounded-full bg-arvana-lime/30 blur-[110px]"
+        className="absolute inset-0 rounded-full bg-arvana-cerulean/30 blur-[110px]"
         animate={{ scale: [1, 1.25, 1], opacity: [0.35, 0.7, 0.35] }}
         transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
       />
       <motion.div
-        className="absolute inset-0 rounded-full bg-arvana-lime/16 blur-[80px]"
+        className="absolute inset-0 rounded-full bg-arvana-cerulean/16 blur-[80px]"
         animate={{ scale: [1, 1.15, 1] }}
         transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
       />

@@ -4,9 +4,6 @@ import { HeroBrandMark } from '@/components/hero/HeroBrandMark';
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
-const WHATSAPP_URL =
-  'https://wa.me/917708431829?text=Hi%20ARVANA%2C%20I%20am%20interested%20in%20your%20AI%20automation%20services.%20Can%20you%20share%20more%20information%3F';
-
 export function Hero() {
   return (
     <section className="section-dark min-h-screen relative flex items-center overflow-hidden pt-[72px]">
@@ -19,12 +16,12 @@ export function Hero() {
           {/* ─── Left: Text ─── */}
           <div className="flex-1 max-w-xl">
             <motion.h1
-              className="text-[clamp(2rem,5vw,3.2rem)] font-[600] leading-[1.15] tracking-tight text-white mb-6"
+              className="text-[clamp(2rem,5vw,3.4rem)] font-[600] leading-[1.15] tracking-tight text-white mb-6"
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease }}
             >
-              Automate customer <span className="text-arvana-lime">conversations</span> on WhatsApp &amp; Instagram
+              Turn Every Conversation Into <span className="text-arvana-cerulean">Business Growth</span>
             </motion.h1>
 
             <motion.p
@@ -33,7 +30,7 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease, delay: 0.1 }}
             >
-              AI automation that answers every enquiry, qualifies leads, and books appointments 24/7 — so your team never misses a customer.
+              AI-powered conversations, smarter lead management and automated workflows that keep your business moving.
             </motion.p>
 
             <motion.div
@@ -42,11 +39,11 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease, delay: 0.2 }}
             >
-              <Button variant="primary" className="px-8 py-3.5 text-base" onClick={() => window.open(WHATSAPP_URL, '_blank')}>
-                Book a Consultation
+              <Button variant="primary" className="px-8 py-3.5 text-base" onClick={() => {}}>
+                Book a Strategy Call
               </Button>
               <Button variant="outline" className="px-8 py-3.5 text-base" onClick={() => {}}>
-                Explore Solutions
+                Explore What We Automate
               </Button>
             </motion.div>
           </div>

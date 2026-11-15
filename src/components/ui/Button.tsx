@@ -22,7 +22,7 @@ export function Button({
 
   const variants = {
     primary:
-      'px-7 py-3 rounded-lg bg-arvana-lime text-arvana-black hover:bg-arvana-lime/90 active:scale-98',
+      'px-7 py-3 rounded-lg bg-arvana-cerulean text-arvana-black hover:bg-arvana-cerulean/90 active:scale-98',
     ghost:
       'px-7 py-3 rounded-lg border border-white/10 text-white hover:bg-white/5 active:scale-98',
     outline:
